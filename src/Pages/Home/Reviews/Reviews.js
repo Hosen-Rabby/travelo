@@ -8,7 +8,7 @@ import Slider from 'react-slick';
 const Reviews = () => {
     const [views, setViews] = useState([])
     useEffect(() => {
-        const url = 'http://whispering-beach-20843.herokuapp.com/reviews'
+        const url = 'https://whispering-beach-20843.herokuapp.com/reviews'
         fetch(url)
             .then(res => res.json())
             .then(data => setViews(data))

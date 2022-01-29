@@ -12,7 +12,7 @@ const Places = () => {
 
     const size = 10;
     useEffect(() => {
-        fetch(`http://whispering-beach-20843.herokuapp.com/places?page=${page}&&size=${size}`)
+        fetch(`https://whispering-beach-20843.herokuapp.com/places?page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setPlaces(data.place);
