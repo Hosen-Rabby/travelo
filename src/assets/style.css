@@ -11,18 +11,41 @@
 
 /* banner */
 
+.banner{
+    max-width: 100vw;
+    overflow: hidden;
+}
+
 .banner img{
     max-height: 100vh;
+    /* max-width: 100px; */
 }
-.slick-track{
-    max-width: 100wh !important;
-}
+
 .slick-dots { 
     bottom: 25px;
+    z-index: 121;
 }
 
 .slick-dots li button:before {
     font-size: 10px;
+}
+
+.pagination button{
+    margin: 10px 5px;
+    border: 1px solid #caf5ca; 
+    background: #caf5ca;
+    padding: 0 15px;
+}
+.pagination .selected{
+    background: rgb(237, 237, 237);
+    color: #caf5ca;
+}
+
+.btn_more{
+    margin: 10px 5px;
+    border: 1px solid #caf5ca; 
+    background: #caf5ca;
+    padding: 0 15px;
 }
 
 /* footer */

@@ -9,7 +9,7 @@ const Navigation = () => {
         <>
             <Navbar bg="light" expand="lg">
                 <Container fluid>
-                    <Navbar.Brand href="#">Travelo</Navbar.Brand>
+                <Navbar.Brand href="/">Travelo</Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav
@@ -17,8 +17,8 @@ const Navigation = () => {
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
-                            <Nav.Link href="#action1">Home</Nav.Link>
-                            <Nav.Link href="#action2">Link</Nav.Link>
+                            <Nav.Link href="/">Home</Nav.Link>
+                            {/* <Nav.Link href="#action2">Link</Nav.Link> */}
                             {/* <NavDropdown title="Link" id="navbarScrollingDropdown">
                             <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
@@ -39,8 +39,8 @@ const Navigation = () => {
                             aria-label="Search"
                         /> */}
                             {
-                                user?.email ?
-
+                                user?.email
+                                    ?
                                     <Button variant="outline-success" onClick={logOutUser}>Logout</Button>
                                     :
                                     <>

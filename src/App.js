@@ -10,16 +10,19 @@ import Login from './Pages/Log/Login/Login';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Footer from './Pages/Shared/Footer/Footer';
-// import PrivateRoute from './Authorization/Private/PrivateRoute/PrivateRoute';
+import Navigation from './Pages/Shared/Navigation/Navigation';
+import PrivateRoute from './Authentication/Private/PrivateRoute/PrivateRoute';
 
 
 function App() {
   return (
     // <div className='App'>
       <AuthProvider>
+           <Navigation/>
+
       <Routes>
         <Route path='/' exact element={<HomePage />} />
-        <Route path="/places/:id" element={<SinglePlace />} />
+        <Route path="/places/:id" element={<PrivateRoute><SinglePlace /></PrivateRoute>} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
       </Routes>

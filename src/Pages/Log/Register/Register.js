@@ -33,7 +33,7 @@ const Register = () => {
         const email = inputData.email;
         const password = inputData.password;
         const userInfo = { name, userName, email, password };
-        fetch('http://localhost:5000/users', {
+        fetch('http://whispering-beach-20843.herokuapp.com/users', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

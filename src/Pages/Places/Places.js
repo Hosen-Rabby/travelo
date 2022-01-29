@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import PlaceShow from './PlaceShow';
+import '../../assets/style.css';
 
 const Places = () => {
     const [places, setPlaces] = useState([]);
@@ -11,8 +12,7 @@ const Places = () => {
 
     const size = 10;
     useEffect(() => {
-        // const url = `http://localhost:5000/places?page=${page}&&size=${size}`;
-        fetch(`http://localhost:5000/places?page=${page}&&size=${size}`)
+        fetch(`http://whispering-beach-20843.herokuapp.com/places?page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setPlaces(data.place);
@@ -37,7 +37,7 @@ const Places = () => {
                     <div className='pagination'>
                         {
                             [...Array(pageCount).keys()].map(number=>
-                                // className = {number === page ? 'selected': ''}
+                                // className = {page ? 'selected': ''}
                                 <button
                                 key = {number}
                                 onClick = {() => setPage(number)}

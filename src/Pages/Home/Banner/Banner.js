@@ -16,6 +16,7 @@ const Banner = () => {
     const settings = {
         dots: true,
         infinite: true,
+        autoplay: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1
@@ -25,6 +26,7 @@ const Banner = () => {
     return (
         <div className='banner'>
             {/* <h2> Banner </h2> */}
+        
 
             <Slider {...settings}>
                 {items.map(img =>
