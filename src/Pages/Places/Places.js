@@ -28,6 +28,9 @@ const Places = () => {
         <div className='places'>
             <Container>
                 <Row>
+                    <h4 className='text-center'>Find Best Places Recomand</h4>
+                </Row>
+                <Row>
                     {
                         places.map(place => <PlaceShow
                             place={place}
