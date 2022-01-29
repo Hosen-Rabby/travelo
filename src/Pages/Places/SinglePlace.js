@@ -18,7 +18,7 @@ const SinglePlace = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setSinglePlace(data))
-    }, []);
+    }, [id]);
 
     return (
         <div className='single_place'>
@@ -38,10 +38,6 @@ const SinglePlace = () => {
                     <p>{description}</p>
                     <p>Treat yourself with a journey to your inner self. Visit a mystique Tibet and start your spiritual adventure. We promise, you’ll enjoy every step you make.</p>
                     <p>Aproximate expense: ${cost}</p>
-                    {/* <Link to={`/places/${_id}`}>
-                        <button>Read More</button>
-                    </Link> */}
-
                     <Rating
                         initialRating={review}
                         fullSymbol="fas fa-star"
